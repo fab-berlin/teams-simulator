@@ -1,7 +1,6 @@
 "use client"
 
 import { createContext, useContext, useState, type ReactNode } from "react"
-import {read} from "fs";
 import {TeamMessages} from "@/types/types";
 
 interface DataContextType {
@@ -13,13 +12,8 @@ interface DataContextType {
 
 const DataContext = createContext<DataContextType | undefined>(undefined)
 
-interface DataProviderProps {
-  children: ReactNode
-  initialFilePath?: string
-}
-
-export function DataProvider({ children, initialFilePath }: DataProviderProps) {
-  const [data, setData] = useState<any>([])
+export function DataProvider({ children }: { children: ReactNode }) {
+  const [data, setData] = useState<TeamMessages>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
