@@ -26,6 +26,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
     const reader = new FileReader();
     reader.onload = (evt) => {
+      setSortOrder('asc');
       setData(JSON.parse(evt.target?.result as string));
     };
     reader.readAsText(file);
