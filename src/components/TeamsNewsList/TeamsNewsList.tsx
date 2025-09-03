@@ -10,7 +10,7 @@ const TeamsNewsList = () => {
   return (<>
     {!data || data?.length === 0 && (<p>Wähle eine JSON-Datei aus...</p>)}
     {data?.length > 0 && <ul>
-      {data.filter((item) => item.skeleton === false).map((item: TeamMessage) => {
+      {data.filter((item) => item.skeleton === false).filter((item)=>item.id).map((item: TeamMessage) => {
         const componentProps = {
           author: item.author,
           timeLabel: item.timeLabel,

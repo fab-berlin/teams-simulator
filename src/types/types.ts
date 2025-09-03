@@ -1,5 +1,5 @@
 export interface TeamMessage {
-  id: string
+  id?: string
   author: string
   timestamp: string
   timeLabel: string
