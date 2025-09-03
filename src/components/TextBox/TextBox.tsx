@@ -1,7 +1,7 @@
-import {TeamMessage} from "@/types/types";
+import { TeamMessage } from '@/types/types';
 
-const TeamBox = ({author, timeLabel, text}: Pick<TeamMessage, 'author' | 'timeLabel' | 'text'>) => {
-  const intials = author.split(" ")[0].substring(0, 1) + author.split(" ")[1].substring(0, 1);
+const TeamBox = ({ author, timeLabel, text }: Pick<TeamMessage, 'author' | 'timeLabel' | 'text'>) => {
+  const intials = author.split(' ')[0].substring(0, 1) + author.split(' ')[1].substring(0, 1);
   return (<section className="flex flex-row items-start py-4">
     <p
       className="size-16 rounded-full bg-black text-white shrink-0 grow-0 flex items-center justify-center text-2xl mr-4">{intials}</p>
@@ -9,7 +9,7 @@ const TeamBox = ({author, timeLabel, text}: Pick<TeamMessage, 'author' | 'timeLa
       <p className="font-bold mb-2">{timeLabel}</p>
       <div className="bg-gray-100 p-4 rounded-md"><p className="text-sm font-bold">{author}</p><p>{text}</p></div>
     </div>
-  </section>)
-}
+  </section>);
+};
 
 export default TeamBox;

@@ -1,0 +1,33 @@
+# Ignore files
+# read more about how to exclude files in the doku https://git-scm.com/docs/gitignore#_pattern_format
+
+# next.js
+/.next/
+/out/
+
+# testing
+/coverage
+
+# api
+/api/client.ts
+
+# YAML
+*.yml
+
+# jest
+jest.config.js
+jest.setup.js
+
+# post.css
+postcss.config.js
+
+# tailwind
+tailwind.config.js
+
+# json
+*.json
+
+/public
+
+# Webforms are external scripts
+/webforms
